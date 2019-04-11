@@ -6,6 +6,9 @@ TagManager:
   tags:
   - NPC
   - Interactable Object
+  - M cont
+  - D cont
+  - cutscene
   layers:
   - Default
   - TransparentFX
