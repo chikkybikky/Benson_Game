@@ -9,6 +9,7 @@ TagManager:
   - M cont
   - D cont
   - cutscene
+  - door
   layers:
   - Default
   - TransparentFX
