@@ -1,5 +1,5 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -19,11 +19,20 @@ public class QuestionManager : MonoBehaviour
 
     public GameObject door;
 
+    public GameObject winmap;
+    public Sprite windoor;
+
     public bool cutscene;
+
+    public AudioSource doorOpen;
 
     void Start()
     {
-        QuestionBox.SetActive(false);
+        if (SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            winmap.SetActive(false);
+        }
+            QuestionBox.SetActive(false);
     }
 
     public void QuestionAsk()
@@ -80,6 +89,12 @@ public class QuestionManager : MonoBehaviour
     }
     void LevelComplete()
     {
+        doorOpen.Play();
         door.transform.tag = "door";
+        if(SceneManager.GetActiveScene().buildIndex == 3)
+        {
+            winmap.SetActive(true);
+            door.GetComponent<SpriteRenderer>().sprite = windoor;
+        }
     }
 }

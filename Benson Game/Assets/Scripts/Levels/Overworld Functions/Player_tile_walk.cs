@@ -13,8 +13,11 @@ public class Player_tile_walk : MonoBehaviour
     int newOrder;
     GameObject lookingAt;
 
+    public AudioSource music;
+
     void Start()
     {
+        music.volume = PlayerPrefs.GetFloat("volume");
         float y = StartPos.y;
         int sortLayer = (int)y * -1;
         GetComponent<SpriteRenderer>().sortingOrder = sortLayer;
@@ -34,7 +37,7 @@ public class Player_tile_walk : MonoBehaviour
                 newOrder = (int)(-1 * pos.y);
                 GetComponent<SpriteRenderer>().sortingOrder = newOrder;
                 ani.SetBool("walking", walking);
-                if (Input.GetKey(KeyCode.E))
+                if (Input.GetKey(KeyCode.Space))
                 {
                     lookingAt = inspect(direction);
                     if (lookingAt != null)

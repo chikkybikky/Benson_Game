@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CutsceneTrigger : MonoBehaviour 
 {
+    public bool final;
     public bool cont;
     public Monologue monologue;
     public Monologue_Trigger next;

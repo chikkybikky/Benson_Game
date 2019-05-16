@@ -15,7 +15,6 @@ public class NPC_Static : MonoBehaviour
         int sortLayer = (int)y * -1;
         GetComponent<SpriteRenderer>().sortingOrder = sortLayer;
         busy = false;
-        transform.position = StartPos;
         GetComponent<SpriteRenderer>().sprite = looks[0];
     }
     private void Update()

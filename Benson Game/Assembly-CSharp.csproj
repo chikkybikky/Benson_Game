@@ -75,7 +75,9 @@
     <Compile Include="Assets\Scripts\Levels\Overworld Functions\Player_tile_walk.cs" />
     <Compile Include="Assets\Scripts\Levels\Q and A\QuestionManager.cs" />
     <Compile Include="Assets\Scripts\Levels\Q and A\QuestionTrigger.cs" />
+    <Compile Include="Assets\Scripts\Menu\AudioSetting.cs" />
     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+    <Compile Include="Assets\Scripts\Menu\FadeIn.cs" />
     <Compile Include="Assets\Scripts\Menu\StartScript.cs" />
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>C:/Users/2031640/Desktop/Benson_Game/Benson Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
